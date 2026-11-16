@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="مكتبة راديو مريم الناصرة" />
+    <title>مكتبة راديو مريم الناصرة</title>
+    <link rel="icon" type="image/png" href="jlogo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Noto+Kufi+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="grain" aria-hidden="true"></div>
+    <main id="top">
+      <section class="catalog-section" id="catalog">
+        <div class="section-heading">
+          <div class="library-heading">
+            <img src="jlogo.png" alt="شعار راديو مريم الناصرة" />
+            <h2>مكتبة راديو مريم الناصرة</h2>
+          </div>
+          <p id="resultCount" class="result-count"></p>
+        </div>
+
+        <div class="catalog-controls">
+          <label class="search-box">
+            <span class="sr-only">البحث في الكتب</span>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.4"></circle><path d="m16 16 4.2 4.2"></path></svg>
+            <input id="searchInput" type="search" placeholder="ابحث بالعنوان أو المؤلف…" autocomplete="off" />
+          </label>
+        </div>
+
+        <div id="bookGrid" class="book-grid" aria-live="polite"></div>
+        <p id="emptyState" class="empty-state" hidden>لم نجد كتاباً بهذه المواصفات. جرّب كلمة بحث أو تصنيفاً آخر.</p>
+      </section>
+
+    </main>
+
+    <footer><span>Radio Maria Nazareth © 2020</span><a href="https://www.radiomariam.org.il" target="_blank" rel="noreferrer">www.radiomariam.org.il</a></footer>
+
+    <dialog id="bookDialog" class="book-dialog" aria-labelledby="dialogTitle">
+      <button class="dialog-close" aria-label="إغلاق">×</button>
+      <div id="dialogContent"></div>
+    </dialog>
+    <script src="books-data.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
